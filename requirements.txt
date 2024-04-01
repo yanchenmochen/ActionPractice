@@ -53,3 +53,4 @@ jsonpickle==3.0.1
 pycrypto==2.6.1
 pycryptodome==3.17
 pytest==7.4.4
+pytest-cov==4.1.0

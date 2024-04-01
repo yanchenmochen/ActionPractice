@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 # test_calculator.py
 
-from src.caculator import add
+from src.caculator import add, sub
 
 
 def test_add_positive_numbers():
@@ -24,6 +24,11 @@ def test_add_zero():
     """Test that the add function returns zero when both numbers are zero."""
     result = add(0, 0)
     assert result == 0
+    
+def test_add_positive_numbers():
+    """Test that the add function correctly adds two positive numbers."""
+    result = sub(3, 4)
+    assert result == -1
 
 # 可选：使用参数化测试来测试更多的情况
 from pytest import mark
