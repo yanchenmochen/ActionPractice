@@ -27,6 +27,7 @@ class DateUtils:
 
     @staticmethod
     def timestamp_in_millis(now: datetime):
+        print(datetime.timestamp(now))
         return int(datetime.timestamp(now) * 1000)
 
     @staticmethod
@@ -38,6 +39,3 @@ class DateUtils:
 
         return DateUtils.timestamp_in_millis(start_time) - DateUtils.timestamp_in_millis(end_time)
 
-
-if __name__ == '__main__':
-    print(DateUtils.now_str())
