@@ -15,7 +15,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: [zjlab-runner]
+    runs-on: self:no-gpu
 
     steps:
     - uses: actions/checkout@v3
