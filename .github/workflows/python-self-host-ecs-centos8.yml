@@ -15,7 +15,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: [self-hosted, linux, x64, ecs, ubuntu2204]
+    runs-on: [self-hosted, linux, x64, ecs, centos8]
 
     steps:
     - uses: actions/checkout@v4
