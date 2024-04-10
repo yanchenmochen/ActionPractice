@@ -19,8 +19,13 @@ jobs:
     container:
       image: 10.101.12.128/framework/jupyter:pytorch-1.10.0-cuda11.3-cudnn8-devel-jupyter-sshd-base
       options: --privileged
+      credentials:
+        username: admin
+        password: admin@ZJ2023
       env: 
         NODE_ENV: developement
+      volumes:
+        - /home/songquanheng:/home/songquanheng
 
     steps:
     - name: set up Docker Buildx
