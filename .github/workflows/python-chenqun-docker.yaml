@@ -13,12 +13,13 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  container-run-test:
 
     runs-on: [self-hosted, linux, x64, chenqun]
     container:
       image: 10.101.12.128/framework/jupyter:pytorch-1.10.0-cuda11.3-cudnn8-devel-jupyter-sshd-base
       options: --privileged
+      
       credentials:
         username: admin
         password: admin@ZJ2023
@@ -26,12 +27,27 @@ jobs:
         NODE_ENV: developement
       volumes:
         - /home/songquanheng:/home/songquanheng
+      
+      ports:
+        - 22
+        - 8888
 
     steps:
-    - name: set up Docker Buildx
-      uses: docker/setup-buildx-action@v3
     
+    - name: show python version
+      run: |
+        python --version
+        
+    - name: show working directory before checkout
+      run: |
+        pwd
     - uses: actions/checkout@v3
+    - name: list the files after checkout
+      run: | 
+        ls -R
+    - name: show working directory
+      run: |
+        pwd
 
     - name: Install dependencies
       run: |
