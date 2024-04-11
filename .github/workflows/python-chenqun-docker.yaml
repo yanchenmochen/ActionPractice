@@ -59,4 +59,5 @@ jobs:
         token: ${{ secrets.CODECOV_TOKEN }}
         file: coverage.xml
         slug: yanchenmochen/ActionPractice
+        verbose: true
         
