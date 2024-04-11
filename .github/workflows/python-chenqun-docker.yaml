@@ -17,7 +17,7 @@ jobs:
 
     runs-on: [self-hosted, linux, x64, chenqun]
     container:
-      image: 10.101.12.128/framework/ubuntu:22.04-official
+      image: 10.101.12.128/framework/ubuntu:22.04-official-ali-python3.7.14
       options: --privileged
       
       credentials:
@@ -32,13 +32,7 @@ jobs:
         - 22
         - 8888
 
-    steps:
-    - name: setup libsqlite3
-      run: |
-        apt install -y libsqlite3-dev
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v3
-    
+    steps:    
     - name: show python version
       run: |
         python --version
