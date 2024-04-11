@@ -55,3 +55,4 @@ pycryptodome==3.17
 pytest==7.4.4
 pytest-cov==4.1.0
 pytest-mock==3.11.1
+codecov-cli==0.3.3
