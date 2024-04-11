@@ -36,17 +36,13 @@ jobs:
     - name: show python version
       run: |
         python --version
-        
-    - name: show working directory before checkout
-      run: |
-        pwd
     - uses: actions/checkout@v3
     - name: list the files after checkout
       run: | 
         ls -R
-    - name: show working directory
+    - name: install git
       run: |
-        pwd
+        apt-get install -y git
 
     - name: Install dependencies
       run: |
