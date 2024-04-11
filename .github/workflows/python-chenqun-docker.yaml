@@ -33,6 +33,9 @@ jobs:
         - 8888
 
     steps:
+    - name: setup libsqlite3
+      run: |
+        apt install -y libsqlite3-dev
     - name: Set up Python 3.7
       uses: actions/setup-python@v3
     
