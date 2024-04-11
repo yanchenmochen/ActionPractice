@@ -17,7 +17,7 @@ jobs:
 
     runs-on: [self-hosted, linux, x64, chenqun]
     container:
-      image: 10.101.12.128/framework/jupyter:pytorch-1.10.0-cuda11.3-cudnn8-devel-jupyter-sshd-base
+      image: 10.101.12.128/framework/ubuntu:22.04-official
       options: --privileged
       
       credentials:
