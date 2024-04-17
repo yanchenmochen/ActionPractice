@@ -13,7 +13,7 @@ permissions:
   contents: read
 
 jobs:
-  42-inference-runner:
+  inference-runner:
 
     runs-on: [self-hosted, linux, x64, 42-inference-runner]
     container:
